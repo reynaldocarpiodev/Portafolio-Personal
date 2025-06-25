@@ -1,0 +1,43 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+header .navbar-brand {
+  letter-spacing: 2px;
+}
+
+section h2 {
+  letter-spacing: 1px;
+}
+
+img.rounded-circle {
+  border: 5px solid #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover, .portfolio-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+footer {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  position: relative;
+}
+footer a {
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #0d6efd;
+}
+
+#formAlert {
+  transition: opacity 0.3s;
+} 
