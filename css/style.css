@@ -1,8 +1,110 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-color: #333;
-    --light-bg: #f8fafc;
+    --primary-color: #171718;
+    --secondary-color: #000000;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+    --accent-color: #60a5fa;
+    --gradient-start: #4f46e5;
+    --gradient-end: #3b37e3;
+    
+    /* Colores para modo oscuro */
+    --dark-primary: #818cf8;
+    --dark-secondary: #60a5fa;
+    --dark-text: #ffffff;
+    --dark-bg: #1e293b;
+    --dark-accent: #bfdbfe;
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode {
+    --text-color: var(--dark-text);
+    --light-bg: var(--dark-bg);
+    background-color: #0f172a;
+    color: var(--dark-text);
+}
+
+body.dark-mode .navbar {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 2px 10px rgb(6, 3, 34);
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand p {
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--dark-primary) !important;
+}
+
+body.dark-mode .search-container .input-group-text,
+body.dark-mode .search-container .form-control {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .skill-badge {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .progress-bar {
+    background: #1e293b;
+}
+
+body.dark-mode .progress {
+    background: var(--primary-color);
+}
+
+/* Botón de cambio de tema */
+.theme-toggle-btn {
+    position: relative;
+    z-index: 1000;
+}
+
+.theme-toggle-btn button {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn button .theme-icon {
+    width: 20px;
+    height: 20px;
+    fill: rgb(232, 229, 94);
+    transition: fill 0.3s ease;
+}
+
+.theme-toggle-btn button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle-btn button:hover .theme-icon {
+    fill: var(--primary-color);
+}
+
+/* Cambiar icono en modo oscuro */
+body.dark-mode .theme-toggle-btn button {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .theme-toggle-btn button .theme-icon {
+    fill: white;
+}
+
+.theme-toggle-btn button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(180deg);
 }
 
 body {
@@ -14,19 +116,65 @@ body {
 /* Header */
 .header {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-bg.jpg');
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
 }
 
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.8), rgba(59, 55, 227, 0.9));
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.header-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.header-content .btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header-content .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Mejorando el navbar */
 .navbar {
     padding: 1rem 0;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(11, 11, 11);
     transition: all 0.3s ease;
 }
 
@@ -37,21 +185,62 @@ body {
 }
 
 .navbar-brand h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0;
+    line-height: 1.2;
 }
 
 .navbar-brand p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     margin: 0;
     color: var(--text-color);
+    opacity: 0.8;
 }
 
+/* Mejorando la barra de búsqueda */
+.search-container {
+    width: 300px;
+    max-width: 100%;
+}
+
+.search-container .input-group {
+    border-radius: 25px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-container .input-group-text {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+}
+
+.search-container .form-control {
+    border: none;
+    background: transparent;
+    color: rgb(7, 14, 49);
+    padding: 0.5rem 1rem;
+}
+
+.search-container .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-container .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(15, 12, 39);
+}
+
+/* Mejorando la navegación */
 .nav-link {
-    color: var(--text-color) !important;
-    transition: color 0.3s ease;
+    color: rgba(0, 0, 0, 0.8) !important;
+    transition: all 0.3s ease;
     position: relative;
     padding: 0.5rem 1rem;
+    font-weight: 500;
 }
 
 .nav-link:hover {
@@ -71,6 +260,32 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .navbar-brand h2 {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand p {
+        font-size: 0.8rem;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+}
+
+.navbar {
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
 }
 
 /* Avatar */

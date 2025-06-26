@@ -16,7 +16,7 @@
                 <div class="d-flex align-items-center w-100">
                     <!-- Avatar -->
                     <div class="avatar-container me-3">
-                        <img src="img/avatar.jpg" alt="Avatar" class="avatar rounded-circle">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLzhEWxq6mUqwgoq64JS6olb7BVg-9kBnHp-jRKAFy9ZKV9Pe8N=s360-c-no" alt="Avatar" class="avatar rounded-circle">
                     </div>
 
                     <!-- Nombre y Título -->
@@ -27,14 +27,9 @@
                         </a>
                     </div>
 
-                    <!-- Botón de menú móvil -->
-                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
                     <!-- Contenedor principal del navbar -->
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="d-flex align-items-center w-100">
+                        <div class="d-flex align-items-center w-100 justify-content-between">
                             <!-- Barra de búsqueda -->
                             <div class="search-container me-3">
                                 <div class="input-group">
@@ -45,24 +40,38 @@
                                 </div>
                             </div>
 
-                            <!-- Navegación -->
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#home">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about">Sobre Mí</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#portfolio">Portafolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#experience">Experiencia</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Contacto</a>
-                                </li>
-                            </ul>
+                            <!-- Navegación y botones -->
+                            <div class="d-flex align-items-center">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#home">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about">Sobre Mí</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#experience">Experiencia</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contact">Contacto</a>
+                                    </li>
+                                </ul>
+                                <!-- Botón de menú móvil -->
+                                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <!-- Botón de modo oscuro -->
+                                <div class="theme-toggle-btn ms-3">
+                                    <button class="btn btn-outline-light" onclick="document.body.classList.toggle('dark-mode')">
+                                        <svg class="theme-icon" viewBox="0 0 24 24">
+                                            <use xlink:href="img/theme-icons.svg#dark-mode"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,9 +79,11 @@
         </nav>
 
         <div class="header-content">
-            <h1>Bienvenido a mi Portafolio</h1>
-            <p>Desarrollador Web | Diseñador | Innovador</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Contactame</a>
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3">Bienvenido a mi Portafolio</h1>
+                <p class="lead mb-4">Desarrollador Web | Diseñador | Innovador</p>
+                <a href="#contact" class="btn btn-primary btn-lg px-4">Contactame</a>
+            </div>
         </div>
     </header>
 
@@ -97,7 +108,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="img/profile.jpg" alt="Mi foto" class="img-fluid rounded-circle">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocLzhEWxq6mUqwgoq64JS6olb7BVg-9kBnHp-jRKAFy9ZKV9Pe8N=s360-c-no" alt="Mi foto" class="img-fluid rounded-circle">
                 </div>
             </div>
         </div>
@@ -110,7 +121,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="img/project1.jpg" alt="Proyecto 1" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Proyecto 1" class="img-fluid">
                         <div class="portfolio-overlay">
                             <h3>Proyecto 1</h3>
                             <p>Desarrollo Web</p>
@@ -119,7 +130,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="img/project2.jpg" alt="Proyecto 2" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Proyecto 2" class="img-fluid">
                         <div class="portfolio-overlay">
                             <h3>Proyecto 2</h3>
                             <p>Diseño UI/UX</p>
@@ -128,7 +139,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="img/project3.jpg" alt="Proyecto 3" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG0yfHx3ZWJzaXRlfGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Proyecto 3" class="img-fluid">
                         <div class="portfolio-overlay">
                             <h3>Proyecto 3</h3>
                             <p>Aplicación Móvil</p>
@@ -215,30 +226,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer py-4">
+    <footer class="footer py-4" id="footer">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2025 Reynaldo Carpio. Todos los derechos reservados.</p>
-                headerStyles.href = 'components/header/header.css';
-                document.head.appendChild(headerStyles);
-
-                const headerScript = document.createElement('script');
-                headerScript.src = 'components/header/header.js';
-                document.body.appendChild(headerScript);
-            });
-
-        // Cargar componente Footer
-        fetch('components/footer/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-component').innerHTML = data;
-                // Cargar estilos después de que el componente se haya cargado
-                const footerStyles = document.createElement('link');
-                footerStyles.rel = 'stylesheet';
-                footerStyles.href = 'components/footer/footer.css';
-                document.head.appendChild(footerStyles);
-            });
     </script>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -254,5 +247,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>
